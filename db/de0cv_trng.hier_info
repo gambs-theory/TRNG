@@ -1,0 +1,935 @@
+|de0cv_trng
+CLOCK_50 => pll40:u_pll.inclk50
+CLOCK_50 => rst50.CLK
+CLOCK_50 => rst50_sr[0].CLK
+CLOCK_50 => rst50_sr[1].CLK
+CLOCK_50 => rst50_sr[2].CLK
+KEY[0] => rst50_sr[0].DATAIN
+LEDR[0] <= heartbeat.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= <GND>
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= pll40:u_pll.locked
+
+
+|de0cv_trng|pll40:u_pll
+inclk50 => altpll:u_altpll.inclk[0]
+areset => altpll:u_altpll.areset
+clk40 <= altpll:u_altpll.clk[0]
+locked <= altpll:u_altpll.locked
+
+
+|de0cv_trng|pll40:u_pll|altpll:u_altpll
+inclk[0] => altpll_e4gb:auto_generated.inclk[0]
+inclk[1] => altpll_e4gb:auto_generated.inclk[1]
+fbin => ~NO_FANOUT~
+pllena => ~NO_FANOUT~
+clkswitch => ~NO_FANOUT~
+areset => altpll_e4gb:auto_generated.areset
+pfdena => ~NO_FANOUT~
+clkena[0] => ~NO_FANOUT~
+clkena[1] => ~NO_FANOUT~
+clkena[2] => ~NO_FANOUT~
+clkena[3] => ~NO_FANOUT~
+clkena[4] => ~NO_FANOUT~
+clkena[5] => ~NO_FANOUT~
+extclkena[0] => ~NO_FANOUT~
+extclkena[1] => ~NO_FANOUT~
+extclkena[2] => ~NO_FANOUT~
+extclkena[3] => ~NO_FANOUT~
+scanclk => ~NO_FANOUT~
+scanclkena => ~NO_FANOUT~
+scanaclr => ~NO_FANOUT~
+scanread => ~NO_FANOUT~
+scanwrite => ~NO_FANOUT~
+scandata => ~NO_FANOUT~
+phasecounterselect[0] => ~NO_FANOUT~
+phasecounterselect[1] => ~NO_FANOUT~
+phasecounterselect[2] => ~NO_FANOUT~
+phasecounterselect[3] => ~NO_FANOUT~
+phaseupdown => ~NO_FANOUT~
+phasestep => ~NO_FANOUT~
+configupdate => ~NO_FANOUT~
+fbmimicbidir <> <GND>
+clk[0] <= clk[0].DB_MAX_OUTPUT_PORT_TYPE
+clk[1] <= clk[1].DB_MAX_OUTPUT_PORT_TYPE
+clk[2] <= clk[2].DB_MAX_OUTPUT_PORT_TYPE
+clk[3] <= clk[3].DB_MAX_OUTPUT_PORT_TYPE
+clk[4] <= clk[4].DB_MAX_OUTPUT_PORT_TYPE
+clk[5] <= clk[5].DB_MAX_OUTPUT_PORT_TYPE
+extclk[0] <= <GND>
+extclk[1] <= <GND>
+extclk[2] <= <GND>
+extclk[3] <= <GND>
+clkbad[0] <= <GND>
+clkbad[1] <= <GND>
+enable1 <= <GND>
+enable0 <= <GND>
+activeclock <= <GND>
+clkloss <= <GND>
+locked <= altpll_e4gb:auto_generated.locked
+scandataout <= <GND>
+scandone <= <GND>
+sclkout0 <= <GND>
+sclkout1 <= <GND>
+phasedone <= <GND>
+vcooverrange <= <GND>
+vcounderrange <= <GND>
+fbout <= <GND>
+fref <= <GND>
+icdrclk <= <GND>
+
+
+|de0cv_trng|pll40:u_pll|altpll:u_altpll|altpll_e4gb:auto_generated
+areset => generic_pll1.I_RST
+areset => generic_pll2.I_RST
+areset => generic_pll3.I_RST
+areset => generic_pll4.I_RST
+areset => generic_pll5.I_RST
+areset => generic_pll6.I_RST
+clk[0] <= generic_pll1.O_OUTCLK
+clk[1] <= generic_pll2.O_OUTCLK
+clk[2] <= generic_pll3.O_OUTCLK
+clk[3] <= generic_pll4.O_OUTCLK
+clk[4] <= generic_pll5.O_OUTCLK
+clk[5] <= generic_pll6.O_OUTCLK
+fbout <= generic_pll1.O_FBOUTCLK
+inclk[0] => generic_pll1.I_REFCLK
+inclk[0] => generic_pll2.I_REFCLK
+inclk[0] => generic_pll3.I_REFCLK
+inclk[0] => generic_pll4.I_REFCLK
+inclk[0] => generic_pll5.I_REFCLK
+inclk[0] => generic_pll6.I_REFCLK
+inclk[1] => ~NO_FANOUT~
+locked <= generic_pll1.LOCKED
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:0:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:1:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:2:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:3:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:4:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:5:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:6:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:7:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:8:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:9:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:10:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:11:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:12:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:13:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:14:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:15:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:16:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:17:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:18:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:19:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:20:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:21:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:22:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:23:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:24:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:25:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:26:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:27:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:28:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:29:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:30:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:31:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:32:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:33:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:34:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:35:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:36:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:37:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:38:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:39:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:40:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:41:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:42:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:43:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:44:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:45:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:46:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:47:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:48:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:49:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:50:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:51:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:52:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:53:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:54:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:55:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:56:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:57:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:58:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:59:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:60:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:61:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:62:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:63:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:64:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:65:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:66:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:67:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:68:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:69:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:70:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:71:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:72:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:73:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:74:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:75:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:76:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:77:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:78:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:79:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:80:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:81:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:82:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:83:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:84:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:85:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:86:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:87:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:88:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:89:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:90:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:91:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:92:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:93:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:94:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:95:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:96:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:97:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:98:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:99:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:100:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:101:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:102:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:103:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:104:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:105:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:106:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:107:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:108:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:109:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:110:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:111:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:112:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|ring_oscillator:\gen_rings:113:u_ring
+enable => inv.IN1
+osc_out <= osc_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|trng_packer:u_packer
+clk => pending.CLK
+clk => bit_idx[0].CLK
+clk => bit_idx[1].CLK
+clk => bit_idx[2].CLK
+clk => shreg[0].CLK
+clk => shreg[1].CLK
+clk => shreg[2].CLK
+clk => shreg[3].CLK
+clk => shreg[4].CLK
+clk => shreg[5].CLK
+clk => shreg[6].CLK
+clk => shreg[7].CLK
+rst => shreg.OUTPUTSELECT
+rst => shreg.OUTPUTSELECT
+rst => shreg.OUTPUTSELECT
+rst => shreg.OUTPUTSELECT
+rst => shreg.OUTPUTSELECT
+rst => shreg.OUTPUTSELECT
+rst => shreg.OUTPUTSELECT
+rst => shreg.OUTPUTSELECT
+rst => bit_idx.OUTPUTSELECT
+rst => bit_idx.OUTPUTSELECT
+rst => bit_idx.OUTPUTSELECT
+rst => pending.OUTPUTSELECT
+bit_in => shreg.DATAB
+bit_valid => shreg.OUTPUTSELECT
+bit_valid => shreg.OUTPUTSELECT
+bit_valid => shreg.OUTPUTSELECT
+bit_valid => shreg.OUTPUTSELECT
+bit_valid => shreg.OUTPUTSELECT
+bit_valid => shreg.OUTPUTSELECT
+bit_valid => shreg.OUTPUTSELECT
+bit_valid => shreg.OUTPUTSELECT
+bit_valid => bit_idx.OUTPUTSELECT
+bit_valid => bit_idx.OUTPUTSELECT
+bit_valid => bit_idx.OUTPUTSELECT
+bit_valid => pending.OUTPUTSELECT
+m_data[0] <= shreg[0].DB_MAX_OUTPUT_PORT_TYPE
+m_data[1] <= shreg[1].DB_MAX_OUTPUT_PORT_TYPE
+m_data[2] <= shreg[2].DB_MAX_OUTPUT_PORT_TYPE
+m_data[3] <= shreg[3].DB_MAX_OUTPUT_PORT_TYPE
+m_data[4] <= shreg[4].DB_MAX_OUTPUT_PORT_TYPE
+m_data[5] <= shreg[5].DB_MAX_OUTPUT_PORT_TYPE
+m_data[6] <= shreg[6].DB_MAX_OUTPUT_PORT_TYPE
+m_data[7] <= shreg[7].DB_MAX_OUTPUT_PORT_TYPE
+m_valid <= pending.DB_MAX_OUTPUT_PORT_TYPE
+m_ready => pending.OUTPUTSELECT
+
+
+|de0cv_trng|jtag_uart_tx:u_jtag
+clk => alt_jtag_atlantic:u_atlantic.clk
+rst => alt_jtag_atlantic:u_atlantic.rst_n
+s_data[0] => alt_jtag_atlantic:u_atlantic.r_dat[0]
+s_data[1] => alt_jtag_atlantic:u_atlantic.r_dat[1]
+s_data[2] => alt_jtag_atlantic:u_atlantic.r_dat[2]
+s_data[3] => alt_jtag_atlantic:u_atlantic.r_dat[3]
+s_data[4] => alt_jtag_atlantic:u_atlantic.r_dat[4]
+s_data[5] => alt_jtag_atlantic:u_atlantic.r_dat[5]
+s_data[6] => alt_jtag_atlantic:u_atlantic.r_dat[6]
+s_data[7] => alt_jtag_atlantic:u_atlantic.r_dat[7]
+s_valid => alt_jtag_atlantic:u_atlantic.r_val
+s_ready <= alt_jtag_atlantic:u_atlantic.r_ena
+
+
+|de0cv_trng|jtag_uart_tx:u_jtag|alt_jtag_atlantic:u_atlantic
+raw_tck => raw_tck.IN1
+tdi => tdi.IN1
+jtag_state_rti => ~NO_FANOUT~
+usr1 => usr1.IN1
+clr => clr.IN1
+ena => ena.IN1
+ir_in[0] => ir_in[0].IN1
+tdo <= sld_jtag_endpoint_adapter:inst.tdo
+ir_out[0] <= sld_jtag_endpoint_adapter:inst.ir_out
+jtag_state_cdr => jtag_state_cdr.IN1
+jtag_state_sdr => jtag_state_sdr.IN1
+jtag_state_udr => jtag_state_udr.IN1
+clk => t_pause~reg0.CLK
+clk => t_ena~reg0.CLK
+clk => rdata[0].CLK
+clk => rdata[1].CLK
+clk => rdata[2].CLK
+clk => rdata[3].CLK
+clk => rdata[4].CLK
+clk => rdata[5].CLK
+clk => rdata[6].CLK
+clk => rdata[7].CLK
+clk => rvalid.CLK
+clk => rvalid0.CLK
+clk => r_ena1.CLK
+clk => jupdate2.CLK
+clk => jupdate1.CLK
+clk => write2.CLK
+clk => write1.CLK
+clk => read2.CLK
+clk => read1.CLK
+clk => rst2.CLK
+clk => rst1.CLK
+rst_n => t_pause~reg0.ACLR
+rst_n => t_ena~reg0.ACLR
+rst_n => rdata[0].ACLR
+rst_n => rdata[1].ACLR
+rst_n => rdata[2].ACLR
+rst_n => rdata[3].ACLR
+rst_n => rdata[4].ACLR
+rst_n => rdata[5].ACLR
+rst_n => rdata[6].ACLR
+rst_n => rdata[7].ACLR
+rst_n => rvalid.ACLR
+rst_n => rvalid0.ACLR
+rst_n => r_ena1.ACLR
+rst_n => jupdate2.ACLR
+rst_n => jupdate1.ACLR
+rst_n => write2.ACLR
+rst_n => write1.ACLR
+rst_n => read2.ACLR
+rst_n => read1.ACLR
+rst_n => rst2.PRESET
+rst_n => rst1.PRESET
+r_ena <= r_ena.DB_MAX_OUTPUT_PORT_TYPE
+r_val => r_ena.IN1
+r_dat[0] => rdata[0].DATAIN
+r_dat[1] => rdata[1].DATAIN
+r_dat[2] => rdata[2].DATAIN
+r_dat[3] => rdata[3].DATAIN
+r_dat[4] => rdata[4].DATAIN
+r_dat[5] => rdata[5].DATAIN
+r_dat[6] => rdata[6].DATAIN
+r_dat[7] => rdata[7].DATAIN
+t_dav => always2.IN1
+t_dav => tck_t_dav.DATAIN
+t_ena <= t_ena~reg0.DB_MAX_OUTPUT_PORT_TYPE
+t_dat[0] <= t_dat[0].DB_MAX_OUTPUT_PORT_TYPE
+t_dat[1] <= t_dat[1].DB_MAX_OUTPUT_PORT_TYPE
+t_dat[2] <= t_dat[2].DB_MAX_OUTPUT_PORT_TYPE
+t_dat[3] <= t_dat[3].DB_MAX_OUTPUT_PORT_TYPE
+t_dat[4] <= t_dat[4].DB_MAX_OUTPUT_PORT_TYPE
+t_dat[5] <= t_dat[5].DB_MAX_OUTPUT_PORT_TYPE
+t_dat[6] <= t_dat[6].DB_MAX_OUTPUT_PORT_TYPE
+t_dat[7] <= t_dat[7].DB_MAX_OUTPUT_PORT_TYPE
+t_pause <= t_pause~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|de0cv_trng|jtag_uart_tx:u_jtag|alt_jtag_atlantic:u_atlantic|sld_jtag_endpoint_adapter:inst
+raw_tck => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tck
+raw_tms => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tms
+tdi => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.tdi
+vir_tdi => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.vir_tdi
+jtag_state_tlr => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_tlr
+jtag_state_rti => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_rti
+jtag_state_sdrs => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_sdrs
+jtag_state_cdr => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_cdr
+jtag_state_sdr => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_sdr
+jtag_state_e1dr => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_e1dr
+jtag_state_pdr => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_pdr
+jtag_state_e2dr => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_e2dr
+jtag_state_udr => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_udr
+jtag_state_sirs => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_sirs
+jtag_state_cir => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_cir
+jtag_state_sir => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_sir
+jtag_state_e1ir => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_e1ir
+jtag_state_pir => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_pir
+jtag_state_e2ir => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_e2ir
+jtag_state_uir => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_uir
+usr1 => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.usr1
+clr => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.clr
+ena => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.ena
+ir_in[0] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.ir_in[0]
+tdo <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.tdo
+ir_out[0] <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.ir_out[0]
+adapted_tck <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_tck
+adapted_tms <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_tms
+adapted_tdi <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_tdi
+adapted_vir_tdi <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_vir_tdi
+adapted_jtag_state_tlr <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_tlr
+adapted_jtag_state_rti <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_rti
+adapted_jtag_state_sdrs <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_sdrs
+adapted_jtag_state_cdr <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_cdr
+adapted_jtag_state_sdr <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_sdr
+adapted_jtag_state_e1dr <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_e1dr
+adapted_jtag_state_pdr <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_pdr
+adapted_jtag_state_e2dr <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_e2dr
+adapted_jtag_state_udr <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_udr
+adapted_jtag_state_sirs <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_sirs
+adapted_jtag_state_cir <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_cir
+adapted_jtag_state_sir <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_sir
+adapted_jtag_state_e1ir <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_e1ir
+adapted_jtag_state_pir <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_pir
+adapted_jtag_state_e2ir <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_e2ir
+adapted_jtag_state_uir <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_uir
+adapted_usr1 <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_usr1
+adapted_clr <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_clr
+adapted_ena <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_ena
+adapted_ir_in[0] <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_ir_in[0]
+adapted_tdo => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_tdo
+adapted_ir_out[0] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_ir_out[0]
+
+
+|de0cv_trng|jtag_uart_tx:u_jtag|alt_jtag_atlantic:u_atlantic|sld_jtag_endpoint_adapter:inst|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst
+raw_tck => adapted_tck.DATAIN
+raw_tms => adapted_tms.DATAIN
+tdi => adapted_tdi.DATAIN
+vir_tdi => adapted_vir_tdi.DATAIN
+jtag_state_tlr => adapted_jtag_state_tlr.DATAIN
+jtag_state_rti => adapted_jtag_state_rti.DATAIN
+jtag_state_sdrs => adapted_jtag_state_sdrs.DATAIN
+jtag_state_cdr => adapted_jtag_state_cdr.DATAIN
+jtag_state_sdr => adapted_jtag_state_sdr.DATAIN
+jtag_state_e1dr => adapted_jtag_state_e1dr.DATAIN
+jtag_state_pdr => adapted_jtag_state_pdr.DATAIN
+jtag_state_e2dr => adapted_jtag_state_e2dr.DATAIN
+jtag_state_udr => adapted_jtag_state_udr.DATAIN
+jtag_state_sirs => adapted_jtag_state_sirs.DATAIN
+jtag_state_cir => adapted_jtag_state_cir.DATAIN
+jtag_state_sir => adapted_jtag_state_sir.DATAIN
+jtag_state_e1ir => adapted_jtag_state_e1ir.DATAIN
+jtag_state_pir => adapted_jtag_state_pir.DATAIN
+jtag_state_e2ir => adapted_jtag_state_e2ir.DATAIN
+jtag_state_uir => adapted_jtag_state_uir.DATAIN
+usr1 => adapted_usr1.DATAIN
+clr => adapted_clr.DATAIN
+ena => adapted_ena.DATAIN
+ir_in[0] => adapted_ir_in[0].DATAIN
+tdo <= adapted_tdo.DB_MAX_OUTPUT_PORT_TYPE
+ir_out[0] <= adapted_ir_out[0].DB_MAX_OUTPUT_PORT_TYPE
+adapted_tck <= raw_tck.DB_MAX_OUTPUT_PORT_TYPE
+adapted_tms <= raw_tms.DB_MAX_OUTPUT_PORT_TYPE
+adapted_tdi <= tdi.DB_MAX_OUTPUT_PORT_TYPE
+adapted_vir_tdi <= vir_tdi.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_tlr <= jtag_state_tlr.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_rti <= jtag_state_rti.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_sdrs <= jtag_state_sdrs.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_cdr <= jtag_state_cdr.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_sdr <= jtag_state_sdr.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_e1dr <= jtag_state_e1dr.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_pdr <= jtag_state_pdr.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_e2dr <= jtag_state_e2dr.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_udr <= jtag_state_udr.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_sirs <= jtag_state_sirs.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_cir <= jtag_state_cir.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_sir <= jtag_state_sir.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_e1ir <= jtag_state_e1ir.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_pir <= jtag_state_pir.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_e2ir <= jtag_state_e2ir.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_uir <= jtag_state_uir.DB_MAX_OUTPUT_PORT_TYPE
+adapted_usr1 <= usr1.DB_MAX_OUTPUT_PORT_TYPE
+adapted_clr <= clr.DB_MAX_OUTPUT_PORT_TYPE
+adapted_ena <= ena.DB_MAX_OUTPUT_PORT_TYPE
+adapted_ir_in[0] <= ir_in[0].DB_MAX_OUTPUT_PORT_TYPE
+adapted_tdo => tdo.DATAIN
+adapted_ir_out[0] => ir_out[0].DATAIN
+
+

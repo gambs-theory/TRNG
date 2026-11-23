@@ -1,0 +1,136 @@
+--altpll bandwidth=0 bandwidth_type="AUTO" c0_high=0 c0_initial=0 c0_low=0 c0_mode="BYPASS" c0_ph=0 c0_test_source=5 c1_high=0 c1_initial=0 c1_low=0 c1_mode="BYPASS" c1_ph=0 c1_test_source=5 c1_use_casc_in="OFF" c2_high=0 c2_initial=0 c2_low=0 c2_mode="BYPASS" c2_ph=0 c2_test_source=5 c2_use_casc_in="OFF" c3_high=0 c3_initial=0 c3_low=0 c3_mode="BYPASS" c3_ph=0 c3_test_source=5 c3_use_casc_in="OFF" c4_high=0 c4_initial=0 c4_low=0 c4_mode="BYPASS" c4_ph=0 c4_test_source=5 c4_use_casc_in="OFF" c5_high=0 c5_initial=0 c5_low=0 c5_mode="BYPASS" c5_ph=0 c5_test_source=5 c5_use_casc_in="OFF" c6_high=0 c6_initial=0 c6_low=0 c6_mode="BYPASS" c6_ph=0 c6_test_source=5 c6_use_casc_in="OFF" c7_high=0 c7_initial=0 c7_low=0 c7_mode="BYPASS" c7_ph=0 c7_test_source=5 c7_use_casc_in="OFF" c8_high=0 c8_initial=0 c8_low=0 c8_mode="BYPASS" c8_ph=0 c8_test_source=5 c8_use_casc_in="OFF" c9_high=0 c9_initial=0 c9_low=0 c9_mode="BYPASS" c9_ph=0 c9_test_source=5 c9_use_casc_in="OFF" CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" charge_pump_current=2 charge_pump_current_bits=9999 clk0_counter="G0" clk0_divide_by=5 clk0_duty_cycle=50 clk0_multiply_by=4 clk0_phase_shift="0" clk0_use_even_counter_mode="OFF" clk0_use_even_counter_value="OFF" clk1_counter="G0" clk1_divide_by=1 clk1_duty_cycle=50 clk1_multiply_by=1 clk1_phase_shift="0" clk1_use_even_counter_mode="OFF" clk1_use_even_counter_value="OFF" clk2_counter="G0" clk2_divide_by=1 clk2_duty_cycle=50 clk2_multiply_by=1 clk2_phase_shift="0" clk2_use_even_counter_mode="OFF" clk2_use_even_counter_value="OFF" clk3_counter="G0" clk3_divide_by=1 clk3_duty_cycle=50 clk3_multiply_by=1 clk3_phase_shift="0" clk3_use_even_counter_mode="OFF" clk3_use_even_counter_value="OFF" clk4_counter="G0" clk4_divide_by=1 clk4_duty_cycle=50 clk4_multiply_by=1 clk4_phase_shift="0" clk4_use_even_counter_mode="OFF" clk4_use_even_counter_value="OFF" clk5_counter="G0" clk5_divide_by=1 clk5_duty_cycle=50 clk5_multiply_by=1 clk5_phase_shift="0" clk5_use_even_counter_mode="OFF" clk5_use_even_counter_value="OFF" clk6_counter="E0" clk6_divide_by=0 clk6_duty_cycle=50 clk6_multiply_by=0 clk6_phase_shift="0" clk6_use_even_counter_mode="OFF" clk6_use_even_counter_value="OFF" clk7_counter="E1" clk7_divide_by=0 clk7_duty_cycle=50 clk7_multiply_by=0 clk7_phase_shift="0" clk7_use_even_counter_mode="OFF" clk7_use_even_counter_value="OFF" clk8_counter="E2" clk8_divide_by=0 clk8_duty_cycle=50 clk8_multiply_by=0 clk8_phase_shift="0" clk8_use_even_counter_mode="OFF" clk8_use_even_counter_value="OFF" clk9_counter="E3" clk9_divide_by=0 clk9_duty_cycle=50 clk9_multiply_by=0 clk9_phase_shift="0" clk9_use_even_counter_mode="OFF" clk9_use_even_counter_value="OFF" compensate_clock="CLK0" device_family="Cyclone V" DPA_DIVIDE_BY=1 DPA_DIVIDER=0 DPA_MULTIPLY_BY=0 ENABLE_SWITCH_OVER_COUNTER="OFF" feedback_source="EXTCLK0" inclk0_input_frequency=20000 inclk1_input_frequency=0 intended_device_family="Cyclone V" lock_high=1 lock_low=1 lock_window_ui="0.05" loop_filter_c=5 loop_filter_c_bits=9999 loop_filter_r="1.000000" loop_filter_r_bits=9999 m=0 m_initial=0 m_ph=0 n=1 operation_mode="normal" pfd_max=0 pfd_min=0 pll_type="AUTO" port_clk0="PORT_CONNECTIVITY" port_clk1="PORT_CONNECTIVITY" port_clk2="PORT_CONNECTIVITY" port_clk3="PORT_CONNECTIVITY" port_clk4="PORT_CONNECTIVITY" port_clk5="PORT_CONNECTIVITY" port_clk6="PORT_UNUSED" port_clk7="PORT_UNUSED" port_clk8="PORT_UNUSED" port_clk9="PORT_UNUSED" port_extclk0="PORT_CONNECTIVITY" port_extclk1="PORT_CONNECTIVITY" port_extclk2="PORT_CONNECTIVITY" port_extclk3="PORT_CONNECTIVITY" port_inclk1="PORT_CONNECTIVITY" port_phasecounterselect="PORT_CONNECTIVITY" port_phasedone="PORT_CONNECTIVITY" port_scandata="PORT_CONNECTIVITY" port_scandataout="PORT_CONNECTIVITY" self_reset_on_loss_lock="OFF" SWITCH_OVER_COUNTER=0 switch_over_type="AUTO" using_fbmimicbidir_port="OFF" vco_center=0 vco_divide_by=0 vco_frequency_control="AUTO" vco_max=0 vco_min=0 vco_multiply_by=0 vco_phase_shift_step=0 vco_post_scale=0 width_clock=6 width_phasecounterselect=4 areset clk inclk locked CARRY_CHAIN="MANUAL" CARRY_CHAIN_LENGTH=48
+--VERSION_BEGIN 25.1 cbx_altclkbuf 2025:10:22:10:31:18:SC cbx_altiobuf_bidir 2025:10:22:10:31:18:SC cbx_altiobuf_in 2025:10:22:10:31:18:SC cbx_altiobuf_out 2025:10:22:10:31:18:SC cbx_altpll 2025:10:22:10:31:18:SC cbx_cycloneii 2025:10:22:10:31:18:SC cbx_lpm_add_sub 2025:10:22:10:31:18:SC cbx_lpm_compare 2025:10:22:10:31:18:SC cbx_lpm_counter 2025:10:22:10:31:18:SC cbx_lpm_decode 2025:10:22:10:31:18:SC cbx_lpm_mux 2025:10:22:10:31:18:SC cbx_mgl 2025:10:22:10:38:57:SC cbx_nadder 2025:10:22:10:31:18:SC cbx_stratix 2025:10:22:10:31:18:SC cbx_stratixii 2025:10:22:10:31:18:SC cbx_stratixiii 2025:10:22:10:31:18:SC cbx_stratixv 2025:10:22:10:31:18:SC cbx_util_mgl 2025:10:22:10:31:18:SC  VERSION_END
+
+
+-- Copyright (C) 2025  Altera Corporation. All rights reserved.
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and any partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, the Altera Quartus Prime License Agreement,
+--  the Altera IP License Agreement, or other applicable license
+--  agreement, including, without limitation, that your use is for
+--  the sole purpose of programming logic devices manufactured by
+--  Altera and sold by Altera or its authorized distributors.  Please
+--  refer to the Altera Software License Subscription Agreements 
+--  on the Quartus Prime software download page.
+
+
+FUNCTION generic_pll (fbclk, refclk, rst)
+WITH ( duty_cycle, output_clock_frequency, phase_shift, reference_clock_frequency)
+RETURNS ( fboutclk, locked, outclk);
+
+--synthesis_resources = generic_pll 6 
+SUBDESIGN altpll_e4gb
+( 
+	areset	:	input;
+	clk[5..0]	:	output;
+	fbout	:	output;
+	inclk[1..0]	:	input;
+	locked	:	output;
+) 
+VARIABLE 
+	generic_pll1 : generic_pll
+		WITH (
+			duty_cycle = 50,
+			output_clock_frequency = "25000 ps",
+			phase_shift = "0 ps",
+			reference_clock_frequency = "20000 ps"
+		);
+	generic_pll2 : generic_pll
+		WITH (
+			duty_cycle = 50,
+			output_clock_frequency = "20000 ps",
+			phase_shift = "0 ps",
+			reference_clock_frequency = "20000 ps"
+		);
+	generic_pll3 : generic_pll
+		WITH (
+			duty_cycle = 50,
+			output_clock_frequency = "20000 ps",
+			phase_shift = "0 ps",
+			reference_clock_frequency = "20000 ps"
+		);
+	generic_pll4 : generic_pll
+		WITH (
+			duty_cycle = 50,
+			output_clock_frequency = "20000 ps",
+			phase_shift = "0 ps",
+			reference_clock_frequency = "20000 ps"
+		);
+	generic_pll5 : generic_pll
+		WITH (
+			duty_cycle = 50,
+			output_clock_frequency = "20000 ps",
+			phase_shift = "0 ps",
+			reference_clock_frequency = "20000 ps"
+		);
+	generic_pll6 : generic_pll
+		WITH (
+			duty_cycle = 50,
+			output_clock_frequency = "20000 ps",
+			phase_shift = "0 ps",
+			reference_clock_frequency = "20000 ps"
+		);
+	fb_clkin	: WIRE;
+
+BEGIN 
+	generic_pll1.fbclk = fb_clkin;
+	generic_pll1.refclk = inclk[0..0];
+	generic_pll1.rst = areset;
+	generic_pll2.fbclk = fb_clkin;
+	generic_pll2.refclk = inclk[0..0];
+	generic_pll2.rst = areset;
+	generic_pll3.fbclk = fb_clkin;
+	generic_pll3.refclk = inclk[0..0];
+	generic_pll3.rst = areset;
+	generic_pll4.fbclk = fb_clkin;
+	generic_pll4.refclk = inclk[0..0];
+	generic_pll4.rst = areset;
+	generic_pll5.fbclk = fb_clkin;
+	generic_pll5.refclk = inclk[0..0];
+	generic_pll5.rst = areset;
+	generic_pll6.fbclk = fb_clkin;
+	generic_pll6.refclk = inclk[0..0];
+	generic_pll6.rst = areset;
+	clk[] = ( generic_pll6.outclk, generic_pll5.outclk, generic_pll4.outclk, generic_pll3.outclk, generic_pll2.outclk, generic_pll1.outclk);
+	fb_clkin = generic_pll1.fboutclk;
+	fbout = fb_clkin;
+	locked = generic_pll1.locked;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_WARNING: ( The parameter value is not one of the pre-specified values in the value list.) altpll|clk0_counter The value assigned is G0 and the valid value list is UNUSED|C0|C1|C2|C3|C4|C5|C6|C7|C8|C9"
+	SEVERITY WARNING;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_WARNING: ( The parameter value is not one of the pre-specified values in the value list.) altpll|clk1_counter The value assigned is G0 and the valid value list is UNUSED|C0|C1|C2|C3|C4|C5|C6|C7|C8|C9"
+	SEVERITY WARNING;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_WARNING: ( The parameter value is not one of the pre-specified values in the value list.) altpll|clk2_counter The value assigned is G0 and the valid value list is UNUSED|C0|C1|C2|C3|C4|C5|C6|C7|C8|C9"
+	SEVERITY WARNING;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_WARNING: ( The parameter value is not one of the pre-specified values in the value list.) altpll|clk3_counter The value assigned is G0 and the valid value list is UNUSED|C0|C1|C2|C3|C4|C5|C6|C7|C8|C9"
+	SEVERITY WARNING;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_WARNING: ( The parameter value is not one of the pre-specified values in the value list.) altpll|clk4_counter The value assigned is G0 and the valid value list is UNUSED|C0|C1|C2|C3|C4|C5|C6|C7|C8|C9"
+	SEVERITY WARNING;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_WARNING: ( The parameter value is not one of the pre-specified values in the value list.) altpll|clk5_counter The value assigned is G0 and the valid value list is UNUSED|C0|C1|C2|C3|C4|C5|C6|C7|C8|C9"
+	SEVERITY WARNING;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_WARNING: ( The parameter value is not one of the pre-specified values in the value list.) altpll|clk6_counter The value assigned is E0 and the valid value list is UNUSED|C0|C1|C2|C3|C4|C5|C6|C7|C8|C9"
+	SEVERITY WARNING;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_WARNING: ( The parameter value is not one of the pre-specified values in the value list.) altpll|clk7_counter The value assigned is E1 and the valid value list is UNUSED|C0|C1|C2|C3|C4|C5|C6|C7|C8|C9"
+	SEVERITY WARNING;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_WARNING: ( The parameter value is not one of the pre-specified values in the value list.) altpll|clk8_counter The value assigned is E2 and the valid value list is UNUSED|C0|C1|C2|C3|C4|C5|C6|C7|C8|C9"
+	SEVERITY WARNING;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_WARNING: ( The parameter value is not one of the pre-specified values in the value list.) altpll|clk9_counter The value assigned is E3 and the valid value list is UNUSED|C0|C1|C2|C3|C4|C5|C6|C7|C8|C9"
+	SEVERITY WARNING;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_WARNING: ( The parameter value is not one of the pre-specified values in the value list.) altpll|feedback_source The value assigned is EXTCLK0 and the valid value list is CLK0|CLK1|CLK2|CLK3|CLK4|CLK5|CLK6|CLK7|CLK8|CLK9"
+	SEVERITY WARNING;
+END;
+--VALID FILE
